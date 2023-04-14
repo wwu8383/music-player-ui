@@ -1,0 +1,58 @@
+<html>
+<header>
+   <title>Music Player</title>
+   <link rel="stylesheet" type="text/css" href="ipod.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</header>
+<body>
+   <div id="screen">
+      <div class="head-bar" role="header-bar">
+         <a href="./albums.html" class="back-button" aria-label="back-button">&#8592;</a>
+   </div>
+   
+   <img class="player-album-art" src="images/currents.jpg" alt="Currents Album Cover"/>
+
+   <div>
+      <p id="player-song-name">The Less I Know The Better</p>
+      <p class="player-song-info"><em>Currents</em> - Tame Impala</p>
+   </div>
+
+   <input aria-label="progress-bar" id="player-time" type="range" value="0" min="0" max="180">
+
+   <div class="song-times" role="time-duration">
+      <div id="time-elapsed" role="current-time">0:00</div>
+      <div role="song-length">3:00</div>
+   </div>
+
+   <div class = "player-controls" role="player-controls">
+      <button aria-label="previous-song" onclick="prevSong()"><i class="material-icons">skip_previous</i></button>
+      <button aria-label="play-or-pause" onclick="switchPlay()"><i id="play" class="material-icons">play_arrow</i></button>
+      <button aria-label="next-song" onclick="nextSong()"><i class="material-icons">skip_next</i></button>
+   </div>
+
+   <div class="volume-level" role="volume-levels">
+      <i class="material-icons" role="volume-icon">volume_down</i>
+      <div role="first-vol level" id="vl0"></div>
+      <div role="second-vol level" id="vl1"></div>
+      <div role="third-vol level" id="vl2"></div>
+      <div role="fourth-vol level" id="vl3"></div>
+      <div role="fifth-vol level" id="vl4"></div>
+      <div role="sixth-vol level" id="vl5"></div>
+   </div>
+
+   <div class="volume-rocker" role="volume-adjuster">
+      <div class="left-volume-button">
+         <button aria-label="decrease-volume" onclick="volDown()" class="button size">&mdash;</button>
+      </div>
+      <div class="right-volume-button">
+         <button aria-label="increase-volume" onclick="volUp()" class="button size">+</button>
+      </div>
+   </div> 
+
+</div>
+<script src="ipod.js"></script>
+</body>
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
